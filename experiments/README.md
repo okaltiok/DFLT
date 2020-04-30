@@ -6,8 +6,8 @@ the first part "open" or "apt" indicates the experiment environment.
 This is followed by the channel number: "ch1", "ch4" or "ch16". 
 
 Each environment contains three experiments (with different number of channels) and in each experiment, four different trials are performed, each with a unique trajectory.
-In the first trial, the person continuously walks around and the ground truth trajectory is unknown.
-In trials 2-4, the person walks from one reference position to another and in each position, the person remains stationary for a few seconds. The ground truth trajectory is known for these trials.
+In the first trial, trial = 0, the person continuously walks around and the ground truth trajectory is unknown.
+In trials 1-3, the person walks from one reference position to another and in each position, the person remains stationary for a few seconds. The ground truth trajectory is known for these trials.
 
 The one channel system uses channel 26.
 The four channel system uses channels 26,16,21,11
