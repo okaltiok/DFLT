@@ -11,26 +11,26 @@ Open access data and algorithms for RSS-based DFLT
 
 The flow of the algorithm is
 
-% initialize parameters
+    % initialize parameters
 
-% Perform N+1 EM iterations
-for i = 0:N
+    % Perform N+1 EM iterations
+    for i = 0:N
 
-    % run filtering recursion (forward)
-    for k = 1:K
-        % compute one recursion of the tracking filter
-        tracking_filter()
+        % run filtering recursion (forward)
+        for k = 1:K
+            % compute one recursion of the tracking filter
+            tracking_filter()
 
-        % compute radio tomographic image
-        rti()
+            % compute radio tomographic image
+            rti()
 
-        % call measurement selection unit
-        measurement_selection()
+            % call measurement selection unit
+            measurement_selection()
+        end
+
+        % run smoothing recursion (backward)
+        rtss()
+
+        % compute parameter estimates using the EM algorithm
+        em()
     end
-
-    % run smoothing recursion (backward)
-    rtss()
-
-    % compute parameter estimates using the EM algorithm
-    em()
-end
